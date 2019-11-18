@@ -31,13 +31,11 @@ public class Training {
             }
         };
 
-        //File [] arquivos = directory.listFiles(filterImage);
-
         List<File> archive = new ArrayList<>(Arrays.asList(directory.listFiles(filterImage)));
         opencv_core.MatVector photos = new opencv_core.MatVector(archive.size());
 
         //ROTULO DA PESSOA {ID}
-        opencv_core.Mat rotulos = new opencv_core.Mat(archive.size(), 1, CV_32SC1);
+        opencv_core.Mat rotulos = new opencv_core.Mat(archive.size(), 1, opencv_core.CV_32SC1);
 
         IntBuffer rotulosBuffer = rotulos.createBuffer();
         int contador = 0;
