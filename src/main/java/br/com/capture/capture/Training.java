@@ -20,8 +20,10 @@ public class Training {
 
     public static void main(String args[]) {
 
+        //AONDE FICA AS FOTOS PARA TREINAR
         File directory = new File("C:\\Projetos Pessoais\\capture_capture\\src\\main\\java\\br\\com\\capture\\fotos");
 
+        //TIPOS DE ARQUIVOS
         FilenameFilter filterImage = new FilenameFilter() {
             @Override
             public boolean accept(File dir, String name) {
@@ -50,6 +52,7 @@ public class Training {
             contador++;
         }
 
+        //CRIAR OS .YML PARA O RECONHECIMENTO FACIAL
         opencv_face.FaceRecognizer eigenfaces = createEigenFaceRecognizer();
         opencv_face.FaceRecognizer fisherfaces = createFisherFaceRecognizer();
         opencv_face.FaceRecognizer lbph = createLBPHFaceRecognizer();
