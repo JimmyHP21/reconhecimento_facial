@@ -32,7 +32,7 @@ public class Reconhecimento {
         //LBPH
         opencv_face.FaceRecognizer reconhecedor = createLBPHFaceRecognizer();
         reconhecedor.load("C:\\Projetos Pessoais\\capture_capture\\src\\main\\java\\br\\com\\capture\\recursos\\classificadores\\classificadorLBPH.yml");
-
+        reconhecedor.setThreshold(50);
 
         OpenCVFrameGrabber camera = new OpenCVFrameGrabber(0);
         camera.start();
